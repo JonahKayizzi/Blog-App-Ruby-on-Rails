@@ -4,7 +4,6 @@ RSpec.describe Comment, type: :model do
   subject { Comment.new(author_id: 1, post_id: 1) }
 
   it 'increments comments_counter of post' do
-    
     user = User.create(Name: 'John Doe', PostsCounter: 0)
 
     post = user.posts.build(Title: 'Post 1', CommentsCounter: 0, LikesCounter: 0)

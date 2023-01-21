@@ -16,12 +16,12 @@
 RSpec.configure do |config|
   config.before(:suite) do
     ActiveRecord::Base.establish_connection(
-      adapter: "postgresql",
-      host: "localhost",
+      adapter: 'postgresql',
+      host: 'localhost',
       port: 5433,
-      username: "postgres",
-      password: "postgres",
-      database: "blog_app"
+      username: 'postgres',
+      password: 'postgres',
+      database: 'blog_app'
     )
   end
   # rspec-expectations config goes here. You can use an alternate
