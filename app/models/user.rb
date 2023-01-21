@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'author_id'
   has_many :likes, foreign_key: 'author_id'
 
-  validates :username, presence: true
+  validates :Name, presence: true
   validates :PostsCounter , numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def last_three_posts_for_user
