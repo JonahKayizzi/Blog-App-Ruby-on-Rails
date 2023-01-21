@@ -2,7 +2,9 @@ class Comment < ApplicationRecord
   belongs_to :user, class_name: 'User', foreign_key: 'author_id'
   belongs_to :post, class_name: 'Post', foreign_key: 'post_id'
 
-  def five_most_recent_comments_for_user(user)
-    user.comments.order(created_at: :desc).limit(5)
+  after_create :update_comments_counter_for_post
+
+  def update_comments_counter_for_post
+    post.increment!(:CommentsCounter)
   end
 end
