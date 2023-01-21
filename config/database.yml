@@ -33,7 +33,7 @@ development:
   #username: blog_app
 
   # The password associated with the postgres role (username).
-  password: postgresql
+  password: postgres
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -58,7 +58,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: blog_app_test
+  username: postgres
+  database: blog_app
+  host: localhost
+  password: postgres
+  port: 5433
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

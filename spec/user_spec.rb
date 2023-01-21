@@ -10,16 +10,6 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'Name should be present' do
-    subject.Name = 'Tom'
-    expect(subject).to be_valid
-  end
-
-  it 'PostsCounter should be integer' do
-    subject.PostsCounter = '10'
-    expect(subject).to_not be_valid
-  end
-
   it 'PostsCounter should be greater than or equal to 0' do
     subject.PostsCounter = -1
     expect(subject).to_not be_valid

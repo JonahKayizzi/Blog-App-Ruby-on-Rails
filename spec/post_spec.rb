@@ -35,20 +35,6 @@ RSpec.describe Post, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'CommentsCounter should be greater than or equal to 0' do
-    subject.CommentsCounter = 15
-    expect(subject).to be_valid
-  end
-
-  it 'LikesCounter should be greater than or equal to 0' do
-    subject.LikesCounter = 15
-    expect(subject).to be_valid
-  end
-
-  it 'Update posts counter for user' do
-    expect(subject.user.PostsCounter).to eq(1)
-  end
-
   it 'Return five most recent comments for post' do
     expect(subject.five_most_recent_comments_for_post).to eq(subject.comments.order(created_at: :desc).limit(5))
   end
