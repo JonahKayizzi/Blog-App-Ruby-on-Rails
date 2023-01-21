@@ -102,8 +102,6 @@ After you're finished please remove all the comments and instructions!
 
 > Live Demo link will be added at the end of the project
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -139,8 +137,7 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-
-  bin/rails test test/models/article_test.rb
+  rspec
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -148,8 +145,6 @@ To run tests, run the following command:
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **Jonathan Kayizzi**
 
