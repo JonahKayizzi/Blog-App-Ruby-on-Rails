@@ -23,8 +23,6 @@ After you're finished please remove all the comments and instructions!
 -->
 
 <div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Blog App - RoR</b></h3>
@@ -47,6 +45,7 @@ After you're finished please remove all the comments and instructions!
     - [Usage](#usage)
     - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
@@ -103,8 +102,6 @@ After you're finished please remove all the comments and instructions!
 
 > Live Demo link will be added at the end of the project
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -140,8 +137,7 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-
-  bin/rails test test/models/article_test.rb
+  rspec
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -149,8 +145,6 @@ To run tests, run the following command:
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **Jonathan Kayizzi**
 
@@ -160,6 +154,21 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+>
+
+- [ ] **Working on Views**
+- [ ] **Working on Forms**
+- [ ] **Adding Devise**
+- [ ] **Adding Authorization rules**
+- [ ] **Integration specs for Views**
+- [ ] **Adding API endpoints**
+- [ ] **API documentation**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -190,7 +199,7 @@ Credit to Microverse for the project specification
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./License.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
