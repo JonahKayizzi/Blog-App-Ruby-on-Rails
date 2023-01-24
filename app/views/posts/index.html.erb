@@ -1,1 +1,20 @@
-<h1>Here is a list of posts for a given user</h1>
+<div class="container">
+    <h1>Posts List</h1>
+    <%= render partial: "/shared/user", locals: { user: @user } %>
+    <div class="user-posts">
+        <% @posts.each.with_index(1) do |post, index| %>
+            <div class="post-with-comments">
+            <a href="/users<%= @user.id %>/posts<%= post.id %>">
+                <%= render partial: "/shared/post", locals: { post: post, index: index } %>
+            </a>
+                <div class="comments">
+                    <% post.comments.order(created_at: :desc).limit(5).each do |comment| %>
+                        <%= render partial: "/shared/comment", locals: { comment: comment } %>
+                    <% end %>
+                </div>
+            </div>
+        <% end %>
+        <button class="btn btn-primary">More Posts</button>
+    </div>
+</div>
+        
