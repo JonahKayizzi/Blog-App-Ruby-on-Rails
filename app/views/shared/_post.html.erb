@@ -1,0 +1,8 @@
+<div class="post">
+    <h5>Post<%= "#" %> <%=index %> <%=post.Title %></h5>
+    <p><%= post.Text.truncate(100,omission:'...') %></p>
+    <ul>
+        <li>Comments: <%= post.CommentsCounter || 0 %> </li>
+        <li>Likes: <%= post.LikesCounter || 0 %> </li>
+    </ul>
+</div>
