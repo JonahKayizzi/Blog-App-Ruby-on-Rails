@@ -13,3 +13,170 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: Helvetica, Geneva, Arial, sans-serif;
+  font-size: small;
+  color: #000;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.a:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 1em 3em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user-name {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0 5em;
+}
+
+.post-no {
+  font-size: 1em;
+  align-self: flex-end;
+}
+
+.user-bio {
+  margin: 10px 0;
+  padding: 1em 3em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 0.8em;
+}
+
+.user-posts {
+  margin: 10px 0;
+  padding: 0.5em 2em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post {
+  margin: 10px 0;
+  padding: 1em 3em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.post p,
+.post-body {
+  font-size: 1.5em;
+}
+
+.post ul,
+.post-head ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2em;
+}
+
+button {
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.post-with-comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5em 0.5em;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5em 0.5em;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2em;
+  margin: 0;
+}
+
+.post-detail {
+  margin: 10px 0;
+  padding: 0.5em 2em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.post-head h5 {
+  font-size: 1.5em;
+}
