@@ -25,11 +25,11 @@ RSpec.describe 'Users', type: :request do
 
   it 'gets correct response body' do
     get "/users#{user.id}"
-    expect(response.body).to include('Here are the details of a particular user')
+    expect(response.body).to include('User Detail')
   end
 
   it 'gets correct response body' do
     get '/users'
-    expect(response.body).to include('Here is a list of all users')
+    expect(response.body).to include('My Blog')
   end
 end

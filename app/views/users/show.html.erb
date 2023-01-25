@@ -1,1 +1,19 @@
-<h1>Here are the details of a particular user</h1>
+<div class="container">
+    <h1>User Detail</h1>
+    <%= render partial: "/shared/user", locals: { user: @user } %>
+    <div class="user-bio">
+        <h5>Bio</h5>
+        <p><%= @user.Bio %></p>
+    </div>
+    <div class="user-posts">
+        <h5>Posts</h5>
+        <% @user.last_three_posts_for_user.each.with_index(1) do |post, index| %>
+            <a href="/users<%= @user.id %>/posts<%= post.id %>">
+                <%= render partial: "/shared/post", locals: { post: post, index: index } %>
+            </a>
+        <% end %>
+        <a href="/users<%= @user.id %>/posts">
+            <button class="btn btn-primary">See all posts</button>
+        </a>
+    </div>
+</div>

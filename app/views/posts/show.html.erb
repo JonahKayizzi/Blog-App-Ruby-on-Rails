@@ -1,1 +1,20 @@
-<h1>Here is a post for a given user</h1>
+<div class="container">
+    <h1>Posts Detail</h1>
+    <div class="post-detail">
+        <div class="post-head">
+            <h5>Post <%=@post.id %> <%= @post.Title %> <% 'by' %> <%= @user.Name %></h5>
+            <ul>
+                <li>Comments: <%= @post.CommentsCounter || 0 %> </li>
+                <li>Likes: <%= @post.LikesCounter || 0 %> </li>
+            </ul>
+        </div>
+        <div class="post-body">
+            <p><%= @post.Text %></p>
+        </div>
+    </div>
+    <div class="comments">
+        <% @post.comments.order(created_at: :desc).each do |comment| %>
+            <%= render partial: "/shared/comment", locals: { comment: comment } %>
+        <% end %>
+    </div>
+</div>
