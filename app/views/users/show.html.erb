@@ -7,7 +7,7 @@
     </div>
     <div class="user-posts">
         <h5>Posts</h5>
-        <% @top_three_posts.each.with_index(1) do |post, index| %>
+        <% @user.last_three_posts_for_user.each.with_index(1) do |post, index| %>
             <a href="/users<%= @user.id %>/posts<%= post.id %>">
                 <%= render partial: "/shared/post", locals: { post: post, index: index } %>
             </a>

@@ -8,7 +8,7 @@
                 <%= render partial: "/shared/post", locals: { post: post, index: index } %>
             </a>
                 <div class="comments">
-                    <% post.comments.order(created_at: :desc).limit(5).each do |comment| %>
+                    <% post.five_most_recent_comments_for_post.each do |comment| %>
                         <%= render partial: "/shared/comment", locals: { comment: comment } %>
                     <% end %>
                 </div>
