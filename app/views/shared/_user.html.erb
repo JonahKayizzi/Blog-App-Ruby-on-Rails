@@ -4,6 +4,6 @@
     </div>
     <div class="user-detail">
         <p class="user-name"><%= user.Name %></p>
-        <p class="post-no">Number of posts: <%= 0 || user.PostsCounter %></p>
+        <p class="post-no">Number of posts: <%= user.PostsCounter || 0 %></p>
     </div>
 </div>
