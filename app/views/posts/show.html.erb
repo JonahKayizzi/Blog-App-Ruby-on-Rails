@@ -4,14 +4,14 @@
         <div class="post-head">
             <h5>Post <%=@post.id %> <%= @post.Title %> <% 'by' %> <%= @user.Name %></h5>
             <ul>
-                <li>Comments: <%= @post.CommentsCounter || 0 %> </li>
-                <li>Likes: <%= @post.LikesCounter || 0 %> </li>
-                <li>
-                    <% form_with model: like, method: :post, url: new_user_like_path, local: true, scope: :new_like do |form| %>
-                        <%= form.hidden_field :post_id, value: @post.id %>
+            <li class="like-form">
+                    <%= form_with model: like, method: :post, url: new_user_like_path, local: true, scope: :new_like do |form| %>
                         <%= form.submit "Like", class: "btn btn-primary" %>
+                        <%= form.hidden_field :post_id, value: @post.id %>
                     <% end %>
                 </li>
+                <li>Comments: <%= @post.CommentsCounter || 0 %> </li>
+                <li>Likes: <%= @post.LikesCounter || 0 %> </li>
             </ul>
         </div>
         <div class="post-body">
