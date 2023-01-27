@@ -122,7 +122,8 @@ h5 {
   gap: 2em;
 }
 
-button {
+button,
+.btn {
   padding: 0.5em 1em;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -179,4 +180,53 @@ button {
 
 .post-head h5 {
   font-size: 1.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+  margin: 10px 0;
+  padding: 0.5em 2em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  font-size: 1.5em;
+  margin: 0 1em;
+}
+
+input {
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.5em;
+  width: 70%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2em;
+  margin: 1em 0;
+}
+
+textarea {
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+
+.btn {
+  align-self: flex-end;
+}
+
+.alert {
+  padding: 0.5em 1em;
+  color: red;
+  font-size: 1em;
 }
