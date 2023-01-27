@@ -30,11 +30,11 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html do
         if post.save
-          flash[:notice] = "Post created successfully"
+          flash[:notice] = 'Post created successfully'
           redirect_to users_path
         else
           Rails.logger.error(post.errors.full_messages)
-          flash.now[:alert] = "Post creation failed"
+          flash.now[:alert] = 'Post creation failed'
           render :new, locals: { post: post }
         end
       end
