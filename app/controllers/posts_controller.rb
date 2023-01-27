@@ -7,6 +7,10 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @post = Post.where(author_id: params[:user_id]).find(params[:id])
+    comment = Comment.new
+    respond_to do |format|
+      format.html { render :show, locals: { comment: comment } }
+    end
   end
 
   def new
@@ -20,12 +24,15 @@ class PostsController < ApplicationController
     post_params = params.require(:new_post).permit(:Title, :Text)
     post = Post.new(post_params)
     post.author = current_user
+    post.CommentsCounter = 0
+    post.LikesCounter = 0
     respond_to do |format|
       format.html do
         if post.save
           flash[:notice] = "Post created successfully"
           redirect_to users_path
         else
+          Rails.logger.error(post.errors.full_messages)
           flash.now[:alert] = "Post creation failed"
           render :new, locals: { post: post }
         end
