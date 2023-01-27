@@ -230,3 +230,12 @@ textarea {
   color: red;
   font-size: 1em;
 }
+
+.like-form form {
+  border: none;
+  padding: 0;
+}
+
+.like-form input {
+  padding: 0.5em 5em;
+}
