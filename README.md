@@ -47,6 +47,7 @@ After you're finished please remove all the comments and instructions!
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
@@ -160,8 +161,6 @@ To run tests, run the following command:
 
 >
 
-- [ ] **Working on Views**
-- [ ] **Working on Forms**
 - [ ] **Adding Devise**
 - [ ] **Adding Authorization rules**
 - [ ] **Integration specs for Views**
@@ -182,6 +181,14 @@ Feel free to check the [issues page](https://github.com/JonahKayizzi/Blog-App-Ru
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please add a ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
