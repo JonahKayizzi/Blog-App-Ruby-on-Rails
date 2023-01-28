@@ -22,11 +22,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    post_params = params.require(:new_post).permit(:Title, :Text)
+    post_params = params.require(:new_post).permit(:title, :text)
     post = Post.new(post_params)
     post.author = current_user
-    post.CommentsCounter = 0
-    post.LikesCounter = 0
+    post.comments_counter = 0
+    post.likes_counter = 0
     respond_to do |format|
       format.html do
         if post.save
