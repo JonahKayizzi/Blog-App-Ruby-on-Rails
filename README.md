@@ -169,8 +169,6 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -178,9 +176,6 @@ To run tests, run the following command:
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/JonahKayizzi/Blog-App-Ruby-on-Rails/issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,7 +195,6 @@ Credit to Microverse for the project specification
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
