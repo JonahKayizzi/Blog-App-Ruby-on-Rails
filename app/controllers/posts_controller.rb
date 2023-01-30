@@ -1,12 +1,13 @@
 class PostsController < ApplicationController
-  def index
-    @user = User.find(params[:user_id])
-    @posts = Post.where(author_id: params[:user_id]).order(created_at: :desc).limit(2)
+  def index  
+   @posts = Post.includes(:author, comments:[:author]).where(author_id: params[:user_id]).order(created_at: :desc).limit(2)
+   @first_post = @posts[0]
   end
 
   def show
-    @user = User.find(params[:user_id])
-    @post = Post.where(author_id: params[:user_id]).find(params[:id])
+    #@user = User.find(params[:user_id])
+    #@post = Post.where(author_id: params[:user_id]).find(params[:id])
+    @post = Post.includes(:author, comments:[:author]).where(author_id: params[:user_id]).find(params[:id])
     comment = Comment.new
     like = Like.new
     respond_to do |format|
