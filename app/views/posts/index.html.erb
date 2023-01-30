@@ -1,14 +1,14 @@
 <div class="container">
     <h1>Posts List</h1>
-    <%= render partial: "/shared/user", locals: { user: @user } %>
+    <%= render partial: "/shared/user", locals: { user: @first_post.author } %>
     <div class="user-posts">
         <% @posts.each.with_index(1) do |post, index| %>
             <div class="post-with-comments">
-            <a href="/users<%= @user.id %>/posts<%= post.id %>">
+            <a href="/users<%= post.author.id %>/posts<%= post.id %>">
                 <%= render partial: "/shared/post", locals: { post: post, index: index } %>
             </a>
                 <div class="comments">
-                    <% post.five_most_recent_comments_for_post.each do |comment| %>
+                    <% post.comments[0...5].each do |comment| %>
                         <%= render partial: "/shared/comment", locals: { comment: comment } %>
                     <% end %>
                 </div>

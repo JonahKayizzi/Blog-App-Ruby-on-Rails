@@ -2,7 +2,7 @@
     <h1>Posts Detail</h1>
     <div class="post-detail">
         <div class="post-head">
-            <h5>Post <%=@post.id %> <%= @post.title %> <% 'by' %> <%= @user.name %></h5>
+            <h5>Post <%=@post.id %> <%= @post.title %> <% 'by' %> <%= @post.author.name %></h5>
             <ul>
             <li class="like-form">
                     <%= form_with model: like, method: :post, url: new_user_like_path, local: true, scope: :new_like do |form| %>
@@ -36,7 +36,7 @@
             <%= form.submit "Submit", class: "btn btn-primary" %>
         <% end %>
         <h5>Recent Comments</h5>
-        <% @post.comments.order(created_at: :desc).each do |comment| %>
+        <% @post.comments.each do |comment| %>
             <%= render partial: "/shared/comment", locals: { comment: comment } %>
         <% end %>
     </div>
