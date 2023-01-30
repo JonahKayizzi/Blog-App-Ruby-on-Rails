@@ -5,8 +5,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    #@user = User.find(params[:user_id])
-    #@post = Post.where(author_id: params[:user_id]).find(params[:id])
     @post = Post.includes(:author, comments:[:author]).where(author_id: params[:user_id]).find(params[:id])
     comment = Comment.new
     like = Like.new
