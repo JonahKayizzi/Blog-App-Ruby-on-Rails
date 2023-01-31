@@ -47,7 +47,7 @@ describe 'user index paged' do
         it 'it shows the bio in show path' do
             visit users_path
             click_link 'Jonathan'
-            expect(page).to_have_content('Fullstack Developer')
+            expect(page).to_have_content('Fullstack Dev')
         end
     end
 end
