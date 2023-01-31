@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  let(:user) { User.create(id: 1, Name: 'Tom', Photo: 'https://unsplash.com/photos/F_-0BxGuVvo', Bio: 'Teacher from Mexico.') }
-  let(:post) { Post.create(id: 1, author_id: user.id, Title: 'Post 3', Text: 'This is my third post') }
+ let(:user) { User.create(id: 99, name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.') }
+ let(:post) { Post.create(title: 'Post 3', text: 'This is my third post', author: user) }
 
   it 'should get index' do
     get "/users#{user.id}/posts"
