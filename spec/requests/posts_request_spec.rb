@@ -1,36 +1,50 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
- let(:user) { User.create(id: 99, name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.') }
- let(:post) { Post.create(title: 'Post 3', text: 'This is my third post', author: user) }
+  before(:each) do
+    @user = User.create(
+      name: 'Tom',
+      bio: 'Teacher from Mexico.',
+      photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+      posts_counter: 2
+    )
+
+    @post = Post.create(
+      author: @user,
+      title: 'Post 3',
+      text: 'This is my third post',
+      comments_counter: 0,
+      likes_counter: 0
+    )
+  end
 
   it 'should get index' do
-    get "/users#{user.id}/posts"
+    get user_posts_path(@user)
     expect(response).to have_http_status(200)
   end
 
   it 'should get show' do
-    get "/users#{user.id}/posts#{post.id}"
+    get user_post_path(@user, @post)
     expect(response).to have_http_status(200)
   end
 
   it 'returns correct show template' do
-    get "/users#{user.id}/posts#{post.id}"
+    get user_post_path(@user, @post)
     expect(response).to render_template(:show)
   end
 
   it 'returns correct index template' do
-    get "/users#{user.id}/posts"
+    get user_posts_path(@user)
     expect(response).to render_template(:index)
   end
 
   it 'gets correct response body' do
-    get "/users#{user.id}/posts#{post.id}"
-    expect(response.body).to include('Here is a post for a given user')
+    get user_post_path(@user, @post)
+    expect(response.body).to include('Posts Detail')
   end
 
   it 'gets correct response body' do
-    get "/users#{user.id}/posts"
-    expect(response.body).to include('Here is a list of posts for a given user')
+    get user_posts_path(@user)
+    expect(response.body).to include('Posts List')
   end
 end
