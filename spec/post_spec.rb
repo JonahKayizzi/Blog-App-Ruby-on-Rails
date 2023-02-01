@@ -1,37 +1,37 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  subject { Post.new(Title: 'My first post', author_id: 1, CommentsCounter: 0, LikesCounter: 0) }
+  subject { Post.new(title: 'My first post', author_id: 1, comments_counter: 0, likes_counter: 0) }
 
   before { subject.save }
 
   it 'Title should be present' do
-    subject.Title = ''
+    subject.title = ''
     expect(subject).to_not be_valid
   end
 
   it 'Title should not be too long' do
-    subject.Title = 'a' * 251
+    subject.title = 'a' * 251
     expect(subject).to_not be_valid
   end
 
   it 'CommentsCounter should be integer' do
-    subject.CommentsCounter = '10'
+    subject.comments_counter = '10'
     expect(subject).to_not be_valid
   end
 
   it 'CommentsCounter should be greater than or equal to 0' do
-    subject.CommentsCounter = -1
+    subject.comments_counter = -1
     expect(subject).to_not be_valid
   end
 
   it 'LikesCounter should be integer' do
-    subject.LikesCounter = '10'
+    subject.likes_counter = '10'
     expect(subject).to_not be_valid
   end
 
   it 'LikesCounter should be greater than or equal to 0' do
-    subject.LikesCounter = -1
+    subject.likes_counter = -1
     expect(subject).to_not be_valid
   end
 
