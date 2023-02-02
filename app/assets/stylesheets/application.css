@@ -250,3 +250,7 @@ textarea {
   justify-content: flex-end;
   width: 100%;
 }
+
+#user_remember_me {
+  width: 2em;
+}
