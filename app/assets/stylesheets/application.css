@@ -239,3 +239,18 @@ textarea {
 .like-form input {
   padding: 0.5em 5em;
 }
+
+.nav button {
+  width: 5em;
+  align-self: flex-end;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#user_remember_me {
+  width: 2em;
+}

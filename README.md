@@ -153,6 +153,10 @@ To run tests, run the following command:
 - Twitter: [@JonahKayizzi](https://twitter.com/JonahKayizzi)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jonathan-kayizzi/)
 
+**Abdulrahman Nganje**
+- GitHub: [@Nganje](https://github.com/asnganje)
+- LinkedIn: [@Nganje](https://www.linkedin.com/in/abdulrahman-nganje-a6436935/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -161,7 +165,6 @@ To run tests, run the following command:
 
 >
 
-- [ ] **Adding Devise**
 - [ ] **Adding Authorization rules**
 - [ ] **Integration specs for Views**
 - [ ] **Adding API endpoints**
