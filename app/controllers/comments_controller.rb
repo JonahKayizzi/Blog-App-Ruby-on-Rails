@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
   end
 
   def post_comments
-    @comments = Comment.find_by(post_id: params[:id])
+    @comments = Comment.where(post_id: params[:id])
     render json: @comments, only: %i[id text author_id]
   end
 end

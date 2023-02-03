@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   end
 
   def user_posts
-    @posts = Post.find_by(author_id: params[:id])
+    @posts = Post.where(author_id: params[:id])
     render json: @posts, only: %i[id title text]
   end
 end
