@@ -4,12 +4,6 @@ class PostsController < ApplicationController
     @posts = Post.includes(:author,
                            comments: [:author]).where(author_id: params[:user_id]).order(created_at: :desc).limit(2)
     @first_post = @posts[0]
-    @posts.each do |post|
-      Rails.logger.info(post.title || 'No title')
-      Rails.logger.info(post.text || 'No text')
-    end
-
-    Rails.logger.info(@first_post.author.name || 'No name')
   end
 
   def show
@@ -46,5 +40,10 @@ class PostsController < ApplicationController
         end
       end
     end
+  end
+
+  def user_posts
+    @posts = Post.find_by(author_id: params[:id])
+    render json: @posts, only: %i[id title text]
   end
 end
